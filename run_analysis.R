@@ -20,32 +20,41 @@ library(dplyr)
       merged_training <- cbind(subject_train, y_train, X_train)
       merged_test <- cbind(subject_test, y_test, X_test)
       merged_data <- rbind(merged_test, merged_training)
-      names(merged_data) <- c("Subjects", "Activities", as.character(features[,2]))
+      colnames(merged_data) <- c("Subjects", "Activities", as.character(features[,2]))
 
 # Step 2: Extract (select) only the columns (measurements) that contain a mean or std measurement
-      merged_data[,grep("mean()", names(merged_data))] # code to extract column names with mean()
-      merged_data[,grep("std()", names(merged_data))] # code to extract column names with std()
-      merged_data[,1:2] # code to extract the first two columns
+      # merged_data[,grep("mean()", names(merged_data))] # code to extract column names with mean()
+      # merged_data[,grep("std()", names(merged_data))] # code to extract column names with std()
+      # merged_data[,1:2] # code to extract the first two columns
 # extract only measurements with mean() and std() in the names
-      merged_data_extract <- cbind(merged_data[,1:2], merged_data[,grep("mean()", names(merged_data))],
-                             merged_data[,grep("std()", names(merged_data))])
-
+      merged_data_extract <- cbind(merged_data[,1:2], merged_data[,grep("mean\\(\\)", names(merged_data))],
+                             merged_data[,grep("std\\(\\)", names(merged_data))])
+      # this grep command does not catch names that end in "mean()"
+      
 # Step 3: Use descriptive activity names to name the activities in the dataset
       activity_labels <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/activity_labels.txt", header = F)
       names(activity_labels) <- c("Index", "Activity") # change the variable names
 # using subsetting, change the number values representing activities into words for activities
       merged_data_extract$Activities <- activity_labels$Activity[merged_data_extract$Activities]
+      
 
 # Step 4: Appropriately label the dataset with descriptive variable names
 # use colnames and sub to make variable name changes
-      colnames(merged_data_extract) <- sub("t", "time.", colnames(merged_data_extract))  
-      colnames(merged_data_extract) <- sub("f", "frequency.", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("tB", "time.B", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("tG", "time.G", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("fB", "freq.B", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("fG", "freq.G", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-mean\\(\\)\\-X", ".mean.X", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-mean\\(\\)\\-Y", ".mean.Y", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-mean\\(\\)\\-Z", ".mean.Z", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-mean\\(\\)", ".mean", colnames(merged_data_extract))
+      
+      colnames(merged_data_extract) <- sub("\\-std\\(\\)\\-X", ".std.X", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-std\\(\\)\\-Y", ".std.Y", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-std\\(\\)\\-Z", ".std.Z", colnames(merged_data_extract))
+      colnames(merged_data_extract) <- sub("\\-std\\(\\)", ".std", colnames(merged_data_extract))
 
-sub("()", "", colnames(merged_data_extract))
-sub("-", ".", colnames(merged_data_extract))
-
-
-
-
+# need to create a loop to achieve the result above.  Too much repeated code
+      
 
 
