@@ -48,10 +48,11 @@ library(dplyr)
 
 # Step 5: Create an independent tidy dataset with the avg of each variable for each activity and subject
       
-      tidy_dataset <- merged_data_extract %>% 
-                  group_by(Subjects, Activities) %>% 
-                  summarize_all(mean) %>% 
-                  ungroup(merged_data_extract)
+      merged_data_extract %>% 
+            group_by(Subjects, Activities) %>% 
+            summarize_all(mean) %>% 
+            ungroup(merged_data_extract) %>% 
+            write.csv("tidy_dataset.csv")
       
       
       
