@@ -1,6 +1,6 @@
 # rProgramming-Assignment4
 
-Read in the tidy_dataset.csv with the following code: read.csv("tidy_dataset.txt")
+Read in the tidy_dataset.csv with the following code: read.table("tidy_dataset.txt", header = T)
 
 ## Instructions:
 

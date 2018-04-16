@@ -1,6 +1,6 @@
-# A Code Book to describe the data and variables that create the tidy dataset, tid_dataset.csv
+# A Code Book to describe the data and variables that create the tidy dataset, *tidy_dataset.txt*
 
-The file **tidy_dataset.csv** contains 68 variables (columns) and 180 observations (rows).
+The file **tidy_dataset.txt** contains 68 variables (columns) and 180 observations (rows).
 
 The 180 observations account for 30 subjects (ages 19-48) conducting 6 different activities wearing a smartphone. The activities are identified in the **activity_labels.txt** as:
 
