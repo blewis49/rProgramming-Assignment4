@@ -2,18 +2,19 @@
 ## Author: William Lewis
 ## Date: 8 April 2018
 ## -------------------------------------------
+install.packages("dplyr")
 library(dplyr)
 
 # Step 1: Merge the training and test data into one dataset
       # Read in the x, y, subject data for both test and training with read.table()
 
-      X_train <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/train/X_train.txt", header = F)
-      y_train <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/train/y_train.txt")
-      subject_train <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/train/subject_train.txt")
-      features <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/features.txt")
-      subject_test <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/test/subject_test.txt")
-      y_test <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/test/y_test.txt")
-      X_test <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/test/X_test.txt", header = F)
+      X_train <- read.table("X_train.txt", header = F)
+      y_train <- read.table("y_train.txt")
+      subject_train <- read.table("subject_train.txt")
+      features <- read.table("features.txt")
+      subject_test <- read.table("subject_test.txt")
+      y_test <- read.table("y_test.txt")
+      X_test <- read.table("X_test.txt", header = F)
 
       # combine the test data by column in the order of subject, y, and x.  Do the same for training data
       # combine the test and training data by rows that results in one large dataset
@@ -32,7 +33,7 @@ library(dplyr)
       
 # Step 3: Use descriptive activity names to name the activities in the dataset
       
-      activity_labels <- read.table("~/Documents/Programming/R_Programming/UCI HAR Dataset/activity_labels.txt", header = F)
+      activity_labels <- read.table("activity_labels.txt", header = F)
       names(activity_labels) <- c("Index", "Activity") # change the variable names
 
       # using subsetting, change the number values representing activities into words for activities
@@ -52,7 +53,7 @@ library(dplyr)
             group_by(Subjects, Activities) %>% 
             summarize_all(mean) %>% 
             ungroup(merged_data_extract) %>% 
-            write.csv("tidy_dataset.csv")
+            write.table("tidy_dataset.txt", row.names = FALSE)
       
       
       
