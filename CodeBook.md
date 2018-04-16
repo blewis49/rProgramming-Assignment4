@@ -1,8 +1,8 @@
 # A Code Book to describe the data and variables that create the tidy dataset, *tidy_dataset.txt*
 
-The file **tidy_dataset.txt** contains 68 variables (columns) and 180 observations (rows).
+The file `tidy_dataset.txt` contains 68 variables (columns) and 180 observations (rows).
 
-The 180 observations account for 30 subjects (ages 19-48) conducting 6 different activities wearing a smartphone. The activities are identified in the **activity_labels.txt** as:
+The 180 observations account for 30 subjects (ages 19-48) conducting 6 different activities wearing a smartphone. The activities are identified in the `activity_labels.txt` as:
 
       1. walking
       2. walking upstairs
@@ -11,7 +11,7 @@ The 180 observations account for 30 subjects (ages 19-48) conducting 6 different
       5. standing
       6. laying
       
-The 68 variable names are measurements of various features for the 6 activities while wearing the smartphone. The features are identified in the file, **features.txt**.  The features are from the accelerometer and gyroscope 3-axial signals in both the *time* and *frequency* domain. These two domains are identified using the prefix time or frequency. The measurements also capture the body linear and angular velocity in time to obtain the Jerk signal.  The mean and standard deviation (std) values were collected for the multiple measurements of each feature for each activity performed by the 30 subjects and reported in both the training and test files.  The R file, run_analysis.R, reads in 7 files, cleans the data and outputs a tidy dataset named >tidy_dataset.txt.  The variable names and descriptions are shown below.
+The 68 variable names are measurements of various features for the 6 activities while wearing the smartphone. The features are identified in the file, `features.txt`.  The features are from the accelerometer and gyroscope 3-axial signals in both the *time* and *frequency* domain. These two domains are identified using the prefix time or frequency. The measurements also capture the body linear and angular velocity in time to obtain the Jerk signal.  The mean and standard deviation (std) values were collected for the multiple measurements of each feature for each activity performed by the 30 subjects and reported in both the training and test files.  The R file, `run_analysis.R`, reads in 7 files, cleans the data and outputs a tidy dataset named `tidy_dataset.txt`.  The variable names and descriptions are shown below.
 
       Field Name               |     Description
       ----------------------   |  ----------------------
