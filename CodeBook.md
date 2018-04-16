@@ -15,25 +15,37 @@ The 68 variable names are measurements of various features for the 6 activities 
 
       Field Name               |     Description
       ----------------------   |  ----------------------
-      Subjects    [1-30]       |      Individual participants in the study experiment.  Subjects are numbered 1 through 30.
-      Activities  [1-6]        |      The activity performed by a subject.  There are a total of 6 actitivies.
+      Subjects    [1-30]       |      Individual participants in the study experiment.  Subjects are 
+      numbered 1 through 30.
+      Activities  [1-6]        |      The activity performed by a subject.  There are a total of 6 
+      actitivies.
       timeBodyAcc.mean.XYZ     |      The mean time measurement on the body acceleration 3-axial signal 
       timeGravityAcc.mean.XYZ  |      The mean time measurement on the gravity acceleration 3-axial signal
-      timeBodyAccJerk.mean.XYZ |      The mean time measurement on the body linear acceleration 3-axial signal
+      timeBodyAccJerk.mean.XYZ |      The mean time measurement on the body linear acceleration 3-axial 
+      signal
       timeBodyGyro.mean.XYZ    |      The mean time measurement on the body gyroscope 3-axial signal
       timeBodyGyroJerk.mean.XYZ|      The mean time measurement on the body angular velocity 3-axial signal
       timeBodyAccMag.mean      |      The mean time magnitude of these 3D signals using Euclidean norm 
       timeGravityAccMag.mean   |      The mean time magnitude of the gravity acceleration of the 3D signal
-      timeBodyAccJerkMag.mean  |      The mean time magnitude of the body linear acceleration of the 3D signal      
+      timeBodyAccJerkMag.mean  |      The mean time magnitude of the body linear acceleration of the 3D 
+      signal      
       timeBodyGyroMag.mean     |      The mean time magnitude of the body gyroscope 3D signal      
-      timeBodyGyroJerkMag.mean |      The mean time magnitude of the body gyroscope angular velocity of the 3D signal      
-      freqBodyAcc.mean.XYZ     |      The mean frequency domain signal for the body acceleration 3-axial signal using FFT
-      freqBodyAccJerk.mean.XYZ |      The mean frequency domain signal for the body linear acceleration 3-axial signal using FFT
-      freqBodyGyro.mean.XYZ    |      The mean frequency domain signal for the body gyroscope 3-axial signal using FFT
-      freqBodyAccMag.mean      |      The mean frequency domain signal for the body acceleration 3-axial signal using FFT
-      freqBodyAccJerkMag.mean  |      The mean frequency domain signal for the body linear acceleration 3-axial signal using FFT
-      freqBodyGyroMag.mean     |      The mean frequency domain signal for the body gyroscope 3-axial signal using FFT
-      freqBodyGyroJerkMag.mean |      The mean frequency domain signal for the body angular velocity 3-axial signal using FFT
+      timeBodyGyroJerkMag.mean |      The mean time magnitude of the body gyroscope angular velocity of the
+      3D signal      
+      freqBodyAcc.mean.XYZ     |      The mean frequency domain signal for the body acceleration 3-axial 
+      signal using FFT
+      freqBodyAccJerk.mean.XYZ |      The mean frequency domain signal for the body linear acceleration 
+      3-axial signal using FFT
+      freqBodyGyro.mean.XYZ    |      The mean frequency domain signal for the body gyroscope 3-axial signal 
+      using FFT
+      freqBodyAccMag.mean      |      The mean frequency domain signal for the body acceleration 3-axial signal 
+      using FFT
+      freqBodyAccJerkMag.mean  |      The mean frequency domain signal for the body linear acceleration 3-axial 
+      signal using FFT
+      freqBodyGyroMag.mean     |      The mean frequency domain signal for the body gyroscope 3-axial signal 
+      using FFT
+      freqBodyGyroJerkMag.mean |      The mean frequency domain signal for the body angular velocity 3-axial 
+      signal using FFT
       timeBodyAcc.std.XYZ      |      The std time measurement on the body acceleration 3-axial signal 
       timeGravityAcc.std.XYZ   |      The std time measurement on the gravity acceleration 3-axial signal
       timeBodyAccJerk.std.XYZ  |      The std time measurement on the body linear acceleration 3-axial signal
