@@ -38,8 +38,8 @@ The 68 variable names are measurements of various features for the 6 activities 
       3-axial signal using FFT
       freqBodyGyro.mean.XYZ    |      The mean frequency domain signal for the body gyroscope 3-axial signal 
       using FFT
-      freqBodyAccMag.mean      |      The mean frequency domain signal for the body acceleration 3-axial signal 
-      using FFT
+      freqBodyAccMag.mean      |      The mean frequency domain signal for the body acceleration 3-axial 
+      signal using FFT
       freqBodyAccJerkMag.mean  |      The mean frequency domain signal for the body linear acceleration 3-axial 
       signal using FFT
       freqBodyGyroMag.mean     |      The mean frequency domain signal for the body gyroscope 3-axial signal 
@@ -55,14 +55,22 @@ The 68 variable names are measurements of various features for the 6 activities 
       timeGravityAccMag.std    |      The std time magnitude of the gravity acceleration of the 3D signal
       timeBodyAccJerkMag.std   |      The std time magnitude of the body linear acceleration of the 3D signal      
       timeBodyGyroMag.std      |      The std time magnitude of the body gyroscope 3D signal      
-      timeBodyGyroJerkMag.std  |      The std time magnitude of the body gyroscope angular velocity of the 3D signal      
-      freqBodyAcc.std.XYZ      |      The std frequency domain signal for the body acceleration 3-axial signal using FFT
-      freqBodyAccJerk.std.XYZ  |      The std frequency domain signal for the body linear acceleration 3-axial signal using FFT
-      freqBodyGyro.std.XYZ     |      The std frequency domain signal for the body gyroscope 3-axial signal using FFT
-      freqBodyAccMag.std       |      The std frequency domain signal for the body acceleration 3-axial signal using FFT
-      freqBodyAccJerkMag.std   |      The std frequency domain signal for the body linear acceleration 3-axial signal using FFT
-      freqBodyGyroMag.std      |      The std frequency domain signal for the body gyroscope 3-axial signal using FFT
-      freqBodyGyroJerkMag.std  |      The std frequency domain signal for the body angular velocity 3-axial signal using FFT
+      timeBodyGyroJerkMag.std  |      The std time magnitude of the body gyroscope angular velocity of the 
+      3D signal      
+      freqBodyAcc.std.XYZ      |      The std frequency domain signal for the body acceleration 3-axial 
+      signal using FFT
+      freqBodyAccJerk.std.XYZ  |      The std frequency domain signal for the body linear acceleration 
+      3-axial signal using FFT
+      freqBodyGyro.std.XYZ     |      The std frequency domain signal for the body gyroscope 3-axial signal
+      using FFT
+      freqBodyAccMag.std       |      The std frequency domain signal for the body acceleration 3-axial 
+      signal using FFT
+      freqBodyAccJerkMag.std   |      The std frequency domain signal for the body linear acceleration 
+      3-axial signal using FFT
+      freqBodyGyroMag.std      |      The std frequency domain signal for the body gyroscope 3-axial signal
+      using FFT
+      freqBodyGyroJerkMag.std  |      The std frequency domain signal for the body angular velocity 3-axial
+      signal using FFT
       
    
       
